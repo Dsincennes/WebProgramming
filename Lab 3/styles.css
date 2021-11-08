@@ -1,0 +1,104 @@
+@CHARSET "ISO-8859-1";
+
+body
+{
+	overflow: scroll;
+	margin: 0px;
+	max-width:100%;
+	font-family: serif;
+	background-color: white;
+}
+
+#header
+{
+	display: flex;
+	flex-direction: row;
+	background-color: gray;
+	font-size: 10pt;
+    color: black;
+    width: 100%;
+    height: 150px;
+    text-align: left;
+}
+
+.title
+{
+	flex: 1;
+}
+	
+#menu 
+{
+    border-style: solid;
+    border-color: black;
+	word-spacing: 2em;
+	font-size: 10pt;
+    line-height: 50%;	
+    text-align: center;
+    background-color: azure;
+    width: 50%;
+	height: 50%;
+	float: right;
+	align-self: flex-end;
+}
+
+#content
+{
+	border-style: solid;
+    border-color: black;
+	font-size: 12pt;
+	text-align: left;
+}
+
+.first
+{
+	font-style: italic;
+	color: blue;
+}
+
+#second
+{
+	font-style: bold;
+	font-style: italic;
+	color: blue;
+}
+
+#footer 
+{
+    background-color: azure;
+    color: black;
+    text-align: center;
+    width: 100%;
+	height: 150px;
+}
+
+[title]{
+	padding-bottom: 3px;
+	border-bottom: 2px dotted blue;
+	text-decoration: none;
+}
+
+a:link{
+	text-decoration: underline;
+	color:blue;
+}
+a:visited{
+	text-decoration: underline;
+	color: purple;
+}
+a:hover{
+	text-decoration: none;
+	font-weight: bold;
+}
+a:active{
+	background-color: yellow;
+}
+
+ul a:link{
+background-color: pink;
+}
+
+table
+{
+border: solid 2pt black;
+background-color: pink;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Palindrome Checker</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+<body>
+
+  <div class="jumbotron text-left pb-0">
+    <h1><b>Computer Engineering Computing Science - Web Programming</b></h1>
+    <div class="container-fluid ">
+      <div class="row justify-content-end">
+        <nav class="navbar navbar-expand-sm bg-light justify-content-center w-50">
+          <ul class="navbar-nav flex-fill">
+            <li class="nav-item flex-fill justify-content-center d-flex">
+              <a class="nav-link" href="index.html">Index</a>
+            </li>
+            <li class="nav-item flex-fill justify-content-center d-flex">
+              <a class="nav-link" href="Palindrome.html">Palindrome</a>
+            </li>
+            <li class="nav-item flex-fill justify-content-center d-flex">
+              <a class="nav-link" href="Prime.html">Prime</a>
+            </li>
+            <li class="nav-item flex-fill justify-content-center d-flex">
+              <a class="nav-link" href="Pattern.html">Pattern</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+
+    function palindrome(word) {
+      let length = word.length;
+
+      for (var i = 0; i < length / 2; i++) {
+        if (word.charAt(i) !== word.charAt(length - 1 - i)) {
+          return false;
+        }
+      }
+      return true;
+    }
+
+    function isPalindrome() {
+      let word = prompt("Please enter a string to check whether it is a Palindrome");
+      const isWordPalindrome = palindrome(word.toLowerCase());
+      if (isWordPalindrome) {
+        document.write("isPalindrome('" + word + "') -> True");
+      } else {
+        document.write("isPalindrome('" + word + "') -> False");
+      }
+    }
+  </script>
+  </head>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-9">
+        <h1>Palindrome<br /> <br /> <br /> </h1>
+        <h3>
+          <script type="text/javascript">
+            isPalindrome();
+          </script>
+        </h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="jumbotron text-center" style="margin-bottom:0">
+    <p>[041011305]</p>
+    <p>Donald Sincennes</p>
+    <a href="mailto:sinc0138@algonquinlive.com">sinc0138@algonquinlive.com</a>
+  </div>
+
+</body>
+
+</html>

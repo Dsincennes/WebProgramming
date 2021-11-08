@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS EXAMPLES</title>
+    <meta charset="utf-8">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header">
+    <div class="title">
+        <h1>Web programming</h1>
+        <h2>Course name: 8238</h2>
+    </div>
+    <!-- Menu -->
+    <div id="menu">
+        <h2><a href="index.html">Index</a> <a href="Multimedia.html">Multimedia</a></h2>
+    </div>
+</div>
+
+<!-- CONTENT -->
+
+<div id="content">
+    <h2>Style Rule of Class Selector</h2>
+    <pre>
+        .first
+        {
+        font-style: italic;
+        color: blue;
+        }
+    </pre>
+    <hr>
+    <h2>Example of class selector</h2>
+    <h5 Class="first">Examples</h5>
+    <h5 Class="first">By Donald Sincennes</h5>
+    <h5>I love hockey</h5>
+    <hr>
+    <hr>
+    <h2>Style Rule of Id Selector</h2>
+    <pre>
+        #second
+        {
+        font-style: bold;
+        font-style: italic;
+        color: green;
+        }
+    </pre>
+    <hr>
+    <h2>Example of id Selector</h2>
+    <div id="second">
+        <h5>Examples</h5>
+        <h5>By Donald Sincennes</h5>
+    </div>
+    <h5>I also love Football!</h5>
+    <hr>
+    <hr>
+    <h2>Style Rule for Attribute selector</h2>
+    <pre>
+        [title]{
+	padding-bottom: 3px;
+	border-bottom: 2px dotted blue;
+	text-decoration: none;
+}
+    </pre>
+    <hr>
+    <img src="can.png" title="Canada Flag"/>
+    <hr>
+    <hr>
+    <h4>Style Rule of Pseudo Selector</h4>
+    <pre>
+    a:link{
+        text-decoration: underline;
+        color:blue;
+        }
+        a:visited{
+        text-decoration: underline;
+        color: purple;
+        }
+        a:hover{
+        text-decoration: none;
+        font-weight: bold;
+        }
+        a:active{
+        background-color: yellow;
+        }
+        </pre>
+    <hr>
+    <h4>Example of Pseudo Selector</h4>
+    <ol>
+        <li><a href="http://google.ca">Google</a></li>
+        <li><a href="http://amazon.ca">Amazon</a></li>
+        <li><a href="http://facebook.com">Facebook</a></li>
+    </ol>
+    <hr>
+    <hr>
+    <h4>Style Rule of Conceptual Selector</h4>
+    <pre>
+    ul a:link
+    {
+    background-color: pink;
+    }
+    </pre>
+    <hr>
+    <h4>Example of Conceptual Selector</h4>
+    <ul>
+        <li><a href="http://google.ca">Google</a></li>
+        <li><a href="http://amazon.ca">Amazon</a></li>
+        <li><a href="http://facebook.com">Facebook</a></li>
+    </ul>
+</div>
+
+<!-- FOOTER -->
+<div id="footer">
+    <p>Student#: 041011305</p>
+    <p>Donald</p>
+    <p>Sincennes</p>
+    <a href="mailto:sinc0138@algonquinlive.com">sinc0138@algonquinlive.com</a>
+</div>
+
+</body>
+
+</html>

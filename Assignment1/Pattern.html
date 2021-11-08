@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Pattern Generator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+<body>
+
+  <div class="jumbotron text-left pb-0">
+    <h1><b>Computer Engineering Computing Science - Web Programming</b></h1>
+    <div class="container-fluid ">
+      <div class="row justify-content-end">
+        <nav class="navbar navbar-expand-sm bg-light justify-content-center w-50">
+          <ul class="navbar-nav flex-fill">
+            <li class="nav-item flex-fill justify-content-center d-flex">
+              <a class="nav-link" href="index.html">Index</a>
+            </li>
+            <li class="nav-item flex-fill justify-content-center d-flex">
+              <a class="nav-link" href="Palindrome.html">Palindrome</a>
+            </li>
+            <li class="nav-item flex-fill justify-content-center d-flex">
+              <a class="nav-link" href="Prime.html">Prime</a>
+            </li>
+            <li class="nav-item flex-fill justify-content-center d-flex">
+              <a class="nav-link" href="Pattern.html">Pattern</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+
+    function pattern() {
+      const choice = prompt("Please select the pattern you want to draw \n1. Triangle 2. Diamond 3. Hollow-Rectangle");
+
+      if (choice == 1) {
+        const size = prompt("Please enter the size of the triangle");
+        for (var row = 0; row < size; row++) {
+          for (var col = 0; col < row; col++) {
+            document.write("*");
+          }
+          document.write("<br>");
+        }
+      }
+      else if (choice == 2) {
+        const size = prompt("Please enter the size of the Diamond");
+        for (var row = 1; row < size; row++) {
+          for (var col = 0; col < row; col++) {
+            document.write("*");
+          }
+          document.write("<br>");
+        }
+        for (var row = size; row > 0; row--) {
+          for (var col = size; col > (size - row); col--) {
+            document.write("*");
+          }
+          document.write("<br>");
+        }
+      }
+      else if (choice == 3) {
+
+        const size = prompt("Please enter the size of the rectangle");
+        for (var i = 0; i < size; i++) {
+          var row_string = '';
+          for (var j = 0; j < size; j++) {
+            row_string = i == 0 || i == size - 1 || j == 0 || j == size - 1 ? '*' : '&nbsp;';
+            document.write(row_string);
+          }
+          document.write("<br>")
+        }
+      }
+    }
+
+  </script>
+  </head>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-9">
+        <h1>Pattern Generator<br /> <br /> <br /> </h1>
+        <p style="font-family: Consolas, 'Courier New', monospace; text-align: center;">
+          <strong>
+            <script type="text/javascript">
+              pattern();
+            </script>
+          </strong>
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="jumbotron text-center" style="margin-bottom:0">
+    <p>[041011305]</p>
+    <p>Donald Sincennes</p>
+    <a href="mailto:sinc0138@algonquinlive.com">sinc0138@algonquinlive.com</a>
+  </div>
+
+</body>
+
+</html>
