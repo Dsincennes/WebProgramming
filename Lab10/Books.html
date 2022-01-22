@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" href="StyleSheet1.css">
+</head>
+
+<body>
+
+<div id="header">
+<div id="menu">
+    <br>
+    <a href="Books.html">Books</a>
+    </div>
+<h1>8238 WEB PROGRAMMING</h1></div>
+
+	<div class="content">
+    <script>
+      function viewBook(str) {
+        if (str=="") {
+          document.getElementById("txtHint").innerHTML="";
+          return;
+        }
+      
+        xmlhttp=new XMLHttpRequest();
+      
+        xmlhttp.onreadystatechange=function() {
+          if (this.readyState==4 && this.status==200) {
+            document.getElementById("txtHint").innerHTML=this.responseText;
+          }
+        }
+        xmlhttp.open("GET","Books.php?q="+str,true);
+        xmlhttp.send();
+      }
+      </script>
+      </head>
+      
+      <body>
+      
+         <div id = "content">
+           <form>
+           Select Book Category:
+           <select name="books" onchange="viewBook(this.value)">
+           <option value="">Select Book Category:</option>
+           <option value="Computer">Computer</option>
+           <option value="Fantasy">Fantasy</option>
+           <option value="Romance">Romance</option>
+           <option value="Horror">Horror</option>
+           <option value="Science Fiction">Science Fiction</option>
+           </select>
+           </form>
+           </br>
+           <div id="txtHint"><b><strong>Select Book Category</strong></b></div>
+         </div>
+      
+      </body>
+	</div>
+    <div id="footer">
+    <br>
+    <strong>Donald Sincennes</strong>
+    <br>
+    <strong>041011305<br>sinc0138@algonquinlive.com</strong>
+    </div>
+</body>
+
+</html>
